@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: "Unna", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    /* border: 1px solid black; */
+}
+
+.header-top {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 0 0 30px;
+}
+
+.mall-name {
+    padding: 0 0 0 50px;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* .banner {
+    border: 1px solid black;
+} */
+
+.header-btn {
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.btn-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 0;
+    padding: 0 50px 0 0;
+}
+
+.sidebar {
+    border: 1px solid black;
+    /* 비율 2:8 */
+    flex: 2;
+    /* text-align: center; */
+    font-size: larger;
+}
+
+li {
+    padding: 5px;
+}
+
+.menu {
+    list-style: none;
+}
+
+.submenu {
+    list-style: none;
+}
+
+.body-align {
+    display: flex;
+    /* 전체 높이 채우기 */
+    height: 100vh;
+}
+
+.content {
+    /* border: 1px solid black; */
+    flex: 8;
+}
+
+.content-header {
+    border: 1px solid black;
+}
+
+.product-grid {
+    /* border: 1px solid black; */
+    /* height: 100vh; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-img {
+    border: 1px solid brown;
+}
+
+.product-name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    margin-top: 10px;
+    font-size: smaller;
+}

@@ -1,94 +1,121 @@
 .product-container {
-    padding: 0 40px 0 40px;
+  padding: 0 40px 0 40px;
 }
 
 .product-list-menu {
-    display: flex;
-    justify-content: space-between;
-    font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
 }
-
-
-/* .product-total {} */
 
 .product-record {
-    list-style: none;
-    display: flex;
-    justify-items: column;
-    color: gray;
+  list-style: none;
+  display: flex;
+  justify-items: column;
+  color: grey;
+  user-select: none;
 }
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(362px, 1fr));
-    gap: 16px;
+.record {
+  cursor: pointer;
+}
+
+.record:hover {
+  color: #a8a8a8;
+}
+
+.product-grid1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .product {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
-.product>strong {
-    padding-top: 20px;
-    font-size: 12px;
+.product > strong {
+  padding-top: 20px;
+  font-size: 12px;
 }
 
-.product>strong>a {
-    text-decoration: none;
-    color: black;
+.product > strong > a {
+  text-decoration: none;
+  color: black;
 }
 
 .prd-img {
-    width: 100%;
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
 }
 
 .description {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .price-info {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 0;
-    margin-left: 0;
-    padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+  margin-left: 0;
+  padding-top: 10px;
 }
 
 .price-div {
-    display: flex;
-    justify-content: inherit;
-    gap: 5px;
+  display: flex;
+  justify-content: inherit;
+  gap: 5px;
 }
 
 .price {
-    font-size: 12px;
-    font-weight: bold;
-    text-align: center;
-    display: flex;
-    align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .discount {
-    /* 가운데 줄 긋기 */
-    text-decoration: line-through;
-    font-weight: lighter;
+  /* 가운데 줄 긋기 */
+  text-decoration: line-through;
+  font-weight: lighter;
 }
 
 .discount-percent {
-    font-size: 20px;
-    color: #df9494;
-    font-weight: bold;
+  font-size: 20px;
+  color: #df9494;
+  font-weight: bold;
 }
 
 .prd-info {
-    padding-left: 0;
-    margin-left: 0;
-    padding-top: 10px;
-    font-size: 11px;
-    color: #a8a8a8;
+  padding-left: 0;
+  margin-left: 0;
+  padding-top: 10px;
+  font-size: 11px;
+  color: #a8a8a8;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 60px;
+}
+
+.pagination li {
+  margin: 0 6px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+  user-select: none;
+}
+
+.pagination li.active {
+  background-color: #df9494;
+  color: white;
 }

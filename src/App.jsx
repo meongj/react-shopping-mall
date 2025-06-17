@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Bottom from "./pages/Bottom";
+import Bottom from "./pages/Bottom/Bottom";
 import "./App.css";
 
 export default function App() {

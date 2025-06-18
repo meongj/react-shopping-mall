@@ -73,6 +73,7 @@ export default function ProductList({ type, setProductCount, sort }) {
           </div>
         ))}
       </div>
+      {/* 페이지네이션 */}
       {pageCount > 0 && (
         <ReactPaginate
           previousLabel={"<"}

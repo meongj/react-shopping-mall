@@ -1,0 +1,30 @@
+.product-detail {
+}
+
+.product-detail-hd {
+  display: flex;
+  padding: 60px 130px 60px 130px;
+  background-color: #f7f7f7;
+  gap: 50px;
+}
+
+.thumbnail {
+  /* 절반 차지 */
+  flex: 1;
+  max-width: 50%;
+}
+
+.prd-detail-img {
+  width: 450px;
+  height: 450px;
+}
+
+.prd-hd-title {
+  flex: 1;
+  max-width: 50%;
+}
+
+.prd-detail-hd-btn {
+  display: flex;
+  justify-content: column;
+}

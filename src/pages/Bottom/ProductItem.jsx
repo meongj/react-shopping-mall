@@ -1,12 +1,16 @@
+import { Link } from "react-router-dom";
 import { formatPrice } from "../../utils/format";
 
 export default function ProductItem({ item }) {
   return (
     <div className="product">
-      <img className="prd-img" src={item.imgUrl} alt={item.name} />
+      {/* 상세 페이지로 이동 */}
+      <Link to={`/products/${item.id}`}>
+        <img className="prd-img" src={item.imgUrl} alt={item.name} />
+      </Link>
       <strong>
-        {/* <a href="/">트위드 자켓</a> */}
-        <a href="/">{item.name}</a>
+        {/* 상세 페이지로 이동 */}
+        <Link to={`/products/${item.id}`}>{item.name}</Link>
       </strong>
 
       <ul className="description">

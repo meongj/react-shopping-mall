@@ -1,11 +1,10 @@
-.product-detail {
-}
-
 .product-detail-hd {
   display: flex;
   padding: 60px 130px 60px 130px;
   background-color: #f7f7f7;
   gap: 50px;
+  font-size: 11px;
+  color: #666666;
 }
 
 .thumbnail {
@@ -22,9 +21,122 @@
 .prd-hd-title {
   flex: 1;
   max-width: 50%;
+  color: #555555;
 }
 
 .prd-detail-hd-btn {
   display: flex;
   justify-content: column;
+}
+
+.prd-name {
+  font-size: 20px;
+  color: #2e2e2e;
+  font-weight: inherit;
+}
+
+.prd-info-table {
+  /* font-size: 11px; */
+  width: 100%;
+  table-layout: fixed;
+}
+
+.prd-info-col-1 {
+  width: 15%;
+}
+
+.prd-info-col-2 {
+  width: 60%;
+}
+
+.prd-info-cell {
+  padding-bottom: 10px;
+}
+
+.square-list {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  padding: 0;
+}
+
+.square-list li {
+  width: 10px;
+  height: 10px;
+  background-color: #999999;
+}
+
+.sale-txt {
+  color: #df9494;
+}
+
+.sale-left-time {
+  color: #4d75da;
+}
+
+.sale-period {
+  color: #353535;
+  background-color: #8d8b8b5c;
+}
+
+.align-top {
+  vertical-align: top;
+}
+
+.prd-add-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.prd-add-col-1 {
+  width: 50%;
+}
+
+.prd-add-col-2 {
+  width: 40%;
+}
+
+.prd-add-col-3 {
+  width: 10%;
+  text-align: right;
+}
+
+.total-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #353535;
+}
+
+.prd-detail-hd-btn {
+  display: flex;
+  width: 100%;
+  gap: 2px;
+}
+
+.prd-detail-hd-btn button {
+  background-color: white;
+  border-color: #99979757;
+  border-width: 1px;
+  height: 48px;
+  font-size: 13px;
+}
+
+.btn-heart {
+  flex: 1;
+}
+
+.btn-cart {
+  flex: 1;
+  color: #666666;
+}
+
+.btn-buy {
+  flex: 3;
+  background-color: #d9cecb !important;
+  color: white;
+  border-color: #d9cecb;
+}
+
+.comment {
+  padding-top: 30px;
 }

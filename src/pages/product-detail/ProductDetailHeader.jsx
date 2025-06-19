@@ -1,31 +1,122 @@
-function ProductDetailHeader({ id }) {
+import QuantityCounter from "../../componets/QuantityCounter";
+import { formatPrice } from "../../utils/format";
+
+function ProductDetailHeader({ product }) {
+  let salePriceDiff = product.price - product.discountedPrice;
+
   return (
     <div className="product-detail-hd">
       <div className="thumbnail">
-        <img className="prd-detail-img" src="/assets/best-item1.jpg" alt={id} />
+        <img
+          className="prd-detail-img"
+          src={product.imgUrl}
+          alt={product.name}
+        />
       </div>
 
       <div className="prd-hd-title">
-        <h3>트위드 자켓</h3>
+        <h2 className="prd-name">
+          {product.name} &nbsp;
+          <img src="/public/assets/product/basic-tag.gif" alt="" />
+          <img src="/public/assets/product/best-tag.gif" alt="" />
+        </h2>
         <hr />
-        <div>판매가 어쩌구</div>
+        {/*테이블 */}
+        <div>
+          <table className="prd-info-table">
+            <tbody>
+              <tr>
+                <td className="prd-info-col-1 prd-info-cell align-top">
+                  <b> 판매가</b>
+                </td>
+                <td className="prd-info-col-2 prd-info-cell align-top">
+                  {formatPrice(product.price)}
+                </td>
+              </tr>
+              <tr>
+                <td className="prd-info-col-1 prd-info-cell align-top">
+                  <b> 할인판매가</b>
+                </td>
+                <td className="prd-info-col-2 prd-info-cell align-top">
+                  <b> {formatPrice(product.discountedPrice)}원</b>{" "}
+                  <b className="sale-txt">
+                    ({formatPrice(salePriceDiff)}원 할인)
+                  </b>
+                </td>
+              </tr>
+              <tr className="prd-info-col-1 prd-info-cell align-top">
+                <td> 할인 기간</td>
+                <td className="prd-info-col-2 prd-info-cell align-top">
+                  {/* yyyy-mm-dd 01:55:15 시작일자와 종료일자 사이 차이 계산 */}
+                  <span className="sale-left-time">
+                    남은 시간 500일 01:55:15 ({formatPrice(salePriceDiff)}원
+                    할인)
+                    <br />
+                  </span>
+                  <span className="sale-period">
+                    {/* todo 없는 경우는? 
+                        해외에서 접근 할경우?
+                        */}
+                    {product.saleStartDate} ~ {product.saleEndDate}
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td className="prd-info-col-1 prd-info-cell align-top">색상</td>
+                <td className="prd-info-col-2 prd-info-cell align-top">
+                  <ul className="square-list">
+                    <li>
+                      <a></a>
+                    </li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <hr />
-        <div>총 상품금액(수량): 0 (0개)</div>
+        {/* 색상 누르면 아이템 추가되는 영역 */}
+        <div>
+          <table className="prd-add-table">
+            <tbody>
+              <tr>
+                <td className="prd-add-col-1">
+                  <p>
+                    <b>트위드 자켓</b>
+                    <br />- <span>아이보리</span>
+                  </p>
+                </td>
+                <td className="prd-add-col-2">
+                  <QuantityCounter />
+
+                  <button>x</button>
+                </td>
+
+                <td className="prd-add-col-3">
+                  <b> 10,000원</b>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <hr />
+
+        <div>
+          {/* 색상 추가했을때 수량, 합계 증가 */}
+          <b>총 상품금액</b>(수량): <b className="total-price">0원</b> (0개)
+        </div>
         <hr />
         <div className="prd-detail-hd-btn">
-          <button>하트</button>
-          <button>CART</button>
-          <button>BUY IT NOW</button>
+          <button className="btn-heart">하트</button>
+          <button className="btn-cart">CART</button>
+          <button className="btn-buy">BUY IT NOW</button>
         </div>
-        <div>
+        <div className="comment">
           <b>comment</b>
-          <p>
-            상품간략설명에 적어주신 내용이 이곳에 보여집니다. 상품 이미지
-            사이즈는 업로드하시는 이미지에 따라 자동으로 비율이 조정되어
-            보여집니다. 디자인관련하여 문의/수정사항 상담은 데이디자인으로
-            와주세요 :) * 상품의 간단한 소개문구 및 사이즈, 소재, 모델
-            사이즈등을 적어주시면 좋습니다.
-          </p>
+          <p>{product.description}</p>
         </div>
       </div>
     </div>

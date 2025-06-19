@@ -1,0 +1,6 @@
+.input-number::-webkit-inner-spin-button,
+.input-number::-webkit-outer-spin-button {
+  opacity: 1;
+  pointer-events: auto;
+  width: 30px;
+}

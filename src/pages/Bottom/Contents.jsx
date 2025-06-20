@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TitleCarousel from "./TitleCarousel";
 import ProductList from "./ProductList";
-import "../../styles/pages/bottom.css";
+import "../../styles/pages/Bottom.css";
 
 export default function Contents() {
   // 카테고리를 부모에서 관리해서 productlist 로 전달해준다
